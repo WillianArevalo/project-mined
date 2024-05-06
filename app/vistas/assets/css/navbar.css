@@ -1,0 +1,371 @@
+.top-bar {
+  width: 100%;
+  background-color: var(--primary-950);
+  border: none;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.top-bar .button-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.top-bar .button-hamburger svg {
+  color: var(--secondary);
+}
+
+.top-bar .button-hamburger:hover {
+  background: var(--primary-900);
+}
+
+.top-bar .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  gap: 10px;
+  background-color: var(--primary-900);
+  padding-inline: 10px;
+  border-radius: 5px;
+}
+
+.top-bar .search input {
+  background: transparent;
+  border: none;
+  color: var(--secondary);
+  padding: 5px;
+}
+
+.top-bar .search input:focus {
+  outline: none;
+}
+
+.top-bar .search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.top-bar .search button svg {
+  color: var(--secondary);
+}
+
+.top-bar .configuration {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.configuration .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.configuration .user span {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.configuration img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--secondary);
+}
+
+.configuration .notification {
+  position: relative;
+}
+
+.notification .alerts {
+  position: absolute;
+  background-color: var(--primary-700);
+  right: 0;
+  border-radius: 5px;
+  top: 45px;
+  width: 300px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+.notification .alerts.open {
+  display: flex;
+}
+
+.notification .alerts h4 {
+  padding: 10px 20px;
+  background-color: var(--primary-600);
+  color: var(--secondary);
+}
+
+.alerts .item-alert {
+  padding: 10px 20px;
+}
+
+.alerts .item-alert p {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--secondary);
+}
+
+.alerts .item-alert:hover {
+  background-color: var(--primary-800);
+  cursor: pointer;
+}
+
+.alerts .item-alert span {
+  font-size: 0.7rem;
+  color: var(--primary-200);
+}
+
+.notification button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+  background: var(--primary-900);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.notification button span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--danger);
+  color: var(--secondary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.notification button svg {
+  color: var(--secondary);
+  width: 20px;
+  height: 20px;
+}
+
+.top-bar .configuration a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-900);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.top-bar .configuration a svg {
+  color: var(--secondary);
+  width: 20px;
+  height: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  height: 100vh;
+  padding: 20px 0px 20px 20px;
+  transition: width 0.4s;
+  width: 105px;
+}
+
+.navbar.open {
+  width: 250px;
+}
+
+.navbar p {
+  display: none;
+}
+
+.navbar.open p {
+  display: block;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--primary-950);
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar ul li a span {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li a span svg {
+  color: var(--secondary);
+}
+
+.navbar ul .logout {
+  margin-top: auto;
+}
+
+.navbar ul li a:hover {
+  background-color: var(--primary-900);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.navbar ul li.active a {
+  background-color: var(--primary-900);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-close {
+  height: 40px;
+  width: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#overlay.show {
+  display: block;
+}
+
+@media (max-width: 845px) {
+  .top-bar .button-hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 690px) {
+  body {
+    gap: 10px;
+  }
+
+  .top-bar {
+    margin-top: 10px;
+  }
+
+  .top-bar .button-hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    width: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    padding: 0px;
+    transition: width 0s;
+  }
+
+  .navbar.open {
+    transition: width 0.4s;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .navbar.open ul {
+    width: 100%;
+  }
+
+  .navbar ul {
+    border-radius: 0px;
+  }
+
+  .button-close {
+    display: flex;
+    background-color: var(--primary-700);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+  }
+
+  .button-close svg {
+    color: var(--secondary);
+  }
+
+  .button-close:hover {
+    background-color: var(--primary-700);
+  }
+}
+
+@media (max-width: 580px) {
+  .top-bar .search {
+    display: none;
+  }
+
+  .notification .alerts {
+    position: fixed;
+    width: 100%;
+    top: 65px;
+    width: calc(100% - 10%);
+    left: 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .configuration img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .notification button svg,
+  .top-bar .configuration a svg {
+    width: 15px;
+    height: 15px;
+  }
+}

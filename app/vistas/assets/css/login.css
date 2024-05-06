@@ -1,0 +1,221 @@
+/* LOGIN */
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* TOAST */
+.toast {
+  position: absolute;
+  top: -200%;
+  right: 0;
+  margin: 30px;
+  padding: 15px 20px;
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  display: block;
+  font-size: 0.9rem;
+  transition: all 0.4s ease;
+  border-radius: 5px;
+  /*   width: calc(100% - 60px); */
+}
+
+.toast.show {
+  top: 0;
+}
+
+.toast button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.toast.error {
+  border: 1px solid var(--danger);
+  color: var(--danger);
+}
+
+.toast.error button {
+  border: 1px solid var(--danger);
+}
+
+.toast.error button svg {
+  color: var(--danger);
+}
+
+.toast.error button:hover {
+  background-color: var(--danger);
+}
+
+.toast.error button:hover svg {
+  color: var(--secondary);
+}
+
+.toast.success {
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.toast.success button {
+  border: 1px solid var(--success);
+}
+
+.toast.success button svg {
+  color: var(--success);
+}
+
+.toast.success button:hover {
+  background-color: var(--success);
+}
+
+.toast.success button:hover svg {
+  color: var(--secondary);
+}
+
+.login {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.input-group {
+  height: 50px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.input-group span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 20px;
+}
+
+.input-group span svg {
+  color: var(--secondary);
+  height: 20px;
+  width: 20px;
+}
+
+.input-group input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--secondary);
+}
+
+.input-group:focus-within {
+  border: 1px solid var(--blue);
+}
+
+.input-group:focus-within span svg {
+  color: var(--blue);
+}
+
+.input-group input:focus {
+  outline: none;
+  border: none;
+}
+
+.input-group.error {
+  border: 1px solid var(--danger);
+}
+
+.input-group.error span svg {
+  color: var(--danger);
+}
+
+.input-group.error .icon-error {
+  display: flex;
+}
+
+.input-group .icon-error {
+  display: none;
+}
+
+.input-group:focus-within .icon-view:hover {
+  background-color: var(--blue);
+}
+
+.input-group:focus-within .icon-view:hover svg {
+  color: var(--secondary);
+}
+
+.icon-view:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+  height: 100%;
+}
+
+.icon-view:hover svg {
+  color: var(--primary);
+}
+
+.view-off {
+  display: none;
+}
+
+.login form button {
+  margin-top: 10px;
+  padding: 15px;
+  border: none;
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.login form button svg {
+  color: var(--secondary);
+}
+
+.login form button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.login form button:hover svg {
+  color: var(--primary);
+}
